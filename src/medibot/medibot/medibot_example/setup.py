@@ -20,10 +20,7 @@ setup(
     ],
     install_requires=['setuptools', 'launch'],
     zip_safe=True,
-    author=['Ryan Shim', 'Gilbert'],
-    author_email=['jhshim@robotis.com', 'kkjong@robotis.com'],
-    maintainer='Will Son',
-    maintainer_email='willson@robotis.com',
+ 
     keywords=['ROS', 'ROS2', 'examples', 'rclpy'],
     classifiers=[
         'Intended Audience :: Developers',
