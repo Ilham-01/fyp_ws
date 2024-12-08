@@ -3,5 +3,5 @@ install/
 log/
 .vscode/
 # Ignore embedded repositories
-src/utils/DynamixelSDK/
-src/utils/hls_lfcd_lds_driver/
+#src/utils/DynamixelSDK/
+#src/utils/hls_lfcd_lds_driver/
