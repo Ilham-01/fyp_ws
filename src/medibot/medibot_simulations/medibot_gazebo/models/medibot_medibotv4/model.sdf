@@ -1,29 +1,31 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="medibot_medibotv4">  
-  <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
-    
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+  
     <link name="base_footprint"/>
     <link name="base_link">
 
       <inertial>
+        <mass>12.985758</mass>
         <pose>0.025297764443169172 3.0256355552437136e-17 0.18296685961651218 0 0 0</pose>
         <inertia>
-          <ixx>0.501298</ixx>
-          <ixy>0</ixy>
-          <ixz>0.050215</ixz>
-          <iyy>0.524336</iyy>
-          <iyz>0</iyz>
-          <izz>0.640713</izz>
+           <ixx>0.501298</ixx>
+           <ixy>0</ixy>
+           <ixz>0.050215</ixz>
+           <iyy>0.524336</iyy>
+           <iyz>0</iyz>
+           <izz>0.640713</izz>
         </inertia>
-        <mass>12.985758</mass>
       </inertial>
 
       <collision name="base_collision">
         <pose>-0 0 0 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/base_link.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/base_link.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>      
         </geometry>
       </collision>
 
@@ -96,6 +98,7 @@
     <link name="base_scan">    
       <inertial>
         <pose>1.9660910471896997e-07 3.067430088395322e-17 0.014762029367898416 0 0 0</pose>
+        <mass>0.052814160089970474</mass>
         <inertia>
           <ixx>9e-06</ixx>
           <ixy>0.000</ixy>
@@ -104,13 +107,14 @@
           <iyz>0.000</iyz>
           <izz>1e-05</izz>
         </inertia>
-        <mass>0.052814160089970474</mass>
       </inertial>
 
       <collision name="lidar_sensor_collision">
         <pose>-0.326625 -0.0 -0.225 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/lidar.stl</uri>
+          <mesh>
+            <uri>model://medibot_common/meshes/lidar.stl</uri>
+          </mesh>
         </geometry>
       </collision>
 
@@ -163,6 +167,7 @@
     <link name="left_wheel">
       <inertial>
         <pose>7.953816428402094e-09 -0.030000265793469483 4.539531719971457e-08 0 0 0</pose>
+        <mass>2.266879326854612</mass>        
         <inertia>
           <ixx>0.021472</ixx>
           <ixy>-0.0</ixy>
@@ -171,14 +176,15 @@
           <iyz>-0.0</iyz>
           <izz>0.021472</izz>
         </inertia>
-        <mass>2.266879326854612</mass>
       </inertial>
 
       <collision name="left_wheel_collision">
         <pose>0.0175 -0.279 -0.16 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/left_wheel.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/left_wheel.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
         <surface>
           <friction>
@@ -232,10 +238,12 @@
       <collision name="right_wheel_collision">
         <pose>0.0175 0.279 -0.16 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/right_wheel.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/right_wheel.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
-         <surface>
+        <surface>
           <!-- This friction pamareter don't contain reliable data!! -->
           <friction>
             <ode>
@@ -287,8 +295,10 @@
       <collision name="left_motor_collision">
         <pose>0.0535 -0.1535 -0.2145 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/left_motor.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/left_motor.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -321,8 +331,10 @@
       <collision name="right_motor_collision">
         <pose>0.0535 0.1535 -0.2145 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/right_motor.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/right_motor.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -355,8 +367,10 @@
       <collision name="bottom_panel_collision">
         <pose>-0.0 0.195 -0.06 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/bottom_panel.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/bottom_panel.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -388,8 +402,10 @@
       <collision name="circuit_panel_collision">
         <pose>0.2 -0.0 -0.35 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/circuit_panel.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/circuit_panel.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -422,8 +438,10 @@
       <collision name="circuit_housing_collision">
         <pose>0.2 -0.0 -0.355 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/circuit_housing.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/circuit_housing.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -455,8 +473,10 @@
       <collision name="stand_collision">
         <pose>-0.08 -0.0 -0.065 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/stand.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/stand.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -489,8 +509,10 @@
       <collision name="body_collision">
         <pose>0.2 -0.0 -0.03 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/body.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/body.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -523,8 +545,10 @@
       <collision name="top_panel_collision">
         <pose>-0.366625 0.0 -0.47 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/top_panel.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/top_panel.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
         <surface>
           <contact>
@@ -571,8 +595,10 @@
       <collision name="realsense_housing_collision">
         <pose>-0.171141 -0.0 -0.52 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/realsense_housing.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/realsense_housing.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
         <surface>
           <contact>
@@ -616,8 +642,10 @@
       <collision name="left_realsense_collision">
         <pose>-0.147314 -0.059696 -0.56 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/left_realsense.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/left_realsense.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -650,8 +678,10 @@
       <collision name="right_realsense_collision">
         <pose>-0.147314 0.059696 -0.56 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/right_realsense.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/right_realsense.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -684,8 +714,10 @@
       <collision name="sonar_collision">
         <pose>-0.08 -0.0 -0.69 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/sonar.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/sonar.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -718,8 +750,10 @@
       <collision name="pan_servo_collision">
         <pose>-0.05 -0.0 -1.06 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/pan_servo.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/pan_servo.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -752,8 +786,10 @@
       <collision name="pan_tilt_mount_collision">
         <pose>-0.05 -0.035 -1.07 0 0 0</pose>
         <geometry>
-          <uri>model://medibot_common/meshes/pan_tilt_mount.stl</uri>
-          <scale>0.001 0.001 0.001</scale>
+          <mesh>
+            <uri>model://medibot_common/meshes/pan_tilt_mount.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
         </geometry>
       </collision>
 
@@ -809,14 +845,14 @@
       <inertial>
         <pose>0.010000010577328328 -1.1068901035776004e-16 2.407478818522435e-07 0 0 0</pose>
         <inertia>
-            <ixx>0.141427</ixx>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.105382</iyy>
-            <iyz>-0.0</iyz>
-            <izz>0.036295</izz>
-          </inertia>
-          <mass>3.7546879999999994</mass>
+          <ixx>0.141427</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.105382</iyy>
+          <iyz>-0.0</iyz>
+          <izz>0.036295</izz>
+        </inertia>
+        <mass>3.7546879999999994</mass>
       </inertial>
 
       <collision name="monitor_collision">
@@ -861,7 +897,7 @@
           <mesh>
             <uri>model://medibot_common/meshes/camera_housing.stl</uri>
             <scale>0.001 0.001 0.001</scale>
-            </mesh>
+          </mesh>
         </geometry>
       </collision>
 
@@ -949,10 +985,17 @@
     <link name="caster">
       <inertial>
         <pose> 0.0 -1.0052123437711852e-17 -0.01125000000000002 0 0 0 </pose>
-          <mass value="0.4439070419522379"/>
-          <inertia ixx="0.000104" ixy="0.0" ixz="-0.0" iyy="0.000104" iyz="-0.0" izz="0.00016"/>
+        <mass>0.4439070419522379</mass>
+        <inertia>
+          <ixx>0.000104</ixx>
+          <ixy>-0.0</ixy>
+          <ixz>-2e-06</ixz>
+          <iyy>0.000104</iyy>
+          <iyz>-0.0</iyz>
+          <izz>0.00016</izz>
+        </inertia>
       </inertial>
-      <visual>
+      <visual name="caster_visual">
         <pose> -0.2885 -0.0 -0.03 0 0 0 </pose>
         <geometry>
             <mesh>
@@ -961,7 +1004,7 @@
             </mesh>
         </geometry>
       </visual>
-      <collision>
+      <collision name="caster_collision">
         <pose> -0.2885 -0.0 -0.03 0 0 0 </pose>
         <geometry>
           <mesh>
@@ -979,57 +1022,57 @@
     </joint>
 
    <joint name="left_motor_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>left_motor</child>
       <pose> -0.0535 0.1535 0.2145 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="left_motor"/>
    </joint>
 
    <joint name="right_motor_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>right_motor</child>
       <pose> -0.0535 -0.1535 0.2145 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="right_motor"/>
    </joint>
 
    <joint name="wheel_left_joint" type="continuous">
+      <parent>left_motor</parent>
+      <child>left_wheel</child>
       <pose> 0.036 0.1255 -0.0545 0 0 0 </pose>
-      <parent link="left_motor"/>
-      <child link="left_wheel"/>
       <axis>
         <xyz>0.0 1.0 0.0</xyz>
       </axis>
    </joint>
 
    <joint name="wheel_right_joint" type="continuous">
+      <parent>right_motor</parent>
+      <child>right_wheel</child>
       <pose> 0.036 -0.1255 -0.0545 0 0 0 </pose>
-      <parent link="right_motor"/>
-      <child link="right_wheel"/>
       <axis>
-      <xyz>-0.0 1.0 0.0"</xyz>
+        <xyz>-0.0 1.0 0.0"</xyz>
       </axis>
    </joint>
 
    <joint name="bottom_panel_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>bottom_panel</child>
       <pose> 0.0 -0.195 0.06 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="bottom_panel"/>
    </joint>
 
    <joint name="circuit_panel_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>circuit_panel</child>
       <pose> -0.2 0.0 0.35 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="circuit_panel"/>
    </joint>
 
    <joint name="cicuit_housing_joint" type="fixed">
+      <parent>circuit_panel</parent>
+      <child>circuit_housing</child>
       <pose> 0.0 0.0 0.005 0 0 0 </pose>
-      <parent link="circuit_panel"/>
-      <child link="circuit_housing"/>
    </joint>
 
    <joint name="stand_joint" type="fixed">
+      <parent>bottom_panel</parent>
+      <child>stand</child>
       <pose> 0.08 0.195 0.005 0 0 0 </pose>
-      <parent link="bottom_panel"/>
-      <child link="stand"/>
    </joint>
 
 
@@ -1043,99 +1086,99 @@
     </joint>    
 
    <joint name="body_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>body</child>
       <pose> -0.2 0.0 0.03 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="body"/>
    </joint>
 
    <joint name="lidar_joint" type="fixed">
+      <parent>body</parent>
+      <child>lidar</child>
       <pose> 0.526625 0.0 0.195 0 0 0 </pose>
-      <parent link="body"/>
-      <child link="lidar"/>
    </joint>
 
    <joint name="top_panel_joint" type="fixed">
+      <parent>body</parent>
+      <child>top_panel</child>
       <pose> 0.566625 -0.0 0.44 0 0 0 </pose>
-      <parent link="body"/>
-      <child link="top_panel"/>
    </joint>
 
    <joint name="realsense_housing_joint" type="fixed">
+      <parent>top_panel</parent>
+      <child>realsense_housing</child>
       <pose> -0.195484 0.0 0.05 0 0 0 </pose>
-      <parent link="top_panel"/>
-      <child link="realsense_housing"/>
    </joint>
 
    <joint name="left_realsense_joint" type="fixed">
+      <parent>realsense_housing</parent>
+      <child>left_realsense</child>
       <pose> -0.023827 0.059696 0.04 0 0 0 </pose>
-      <parent link="realsense_housing"/>
-      <child link="left_realsense"/>
    </joint>
 
    <joint name="right_realsense_joint" type="fixed">
+      <parent>realsense_housing</parent>
+      <child>right_realsense</child>
       <pose> -0.023827 -0.059696 0.04 0 0 0 </pose>
-      <parent link="realsense_housing"/>
-      <child link="right_realsense"/>
    </joint>
 
    <joint name="sonar_joint" type="fixed">
+      <parent>stand</parent>
+      <child>sonar</child>
       <pose> 0.0 0.0 0.625 0 0 0 </pose>
-      <parent link="stand"/>
-      <child link="sonar"/>
    </joint>
 
    <joint name="pan_servo_joint" type="continuous">
+      <parent>stand</parent>
+      <child>pan_servo</child>
       <pose> -0.03 0.0 0.995 0 0 0 </pose>
-      <parent link="stand"/>
-      <child link="pan_servo"/>
       <axis>
         <xyz>0 0 1</xyz>
       </axis>
    </joint>
 
    <joint name="pan_mount_joint" type="fixed">
+      <parent>pan_servo</parent>
+      <child>pan_tilt_mount</child>
       <pose> 0.0 0.035 0.01 0 0 0 </pose>
-      <parent link="pan_servo"/>
-      <child link="pan_tilt_mount"/>
    </joint>
 
    <joint name="tilt_mount_joint" type="fixed">
+      <parent>pan_tilt_mount</parent>
+      <child>tilt_servo</child>
       <pose> 0.0 0.016 0.2 0 0 0 </pose>
-      <parent link="pan_tilt_mount"/>
-      <child link="tilt_servo"/>
    </joint>
 
    <joint name="tilt_servo_joint" type="continuous">
+      <parent>tilt_servo</parent>
+      <child>mount</child>
       <pose> 0.025 -0.016 -0.0525 0 0 0 </pose>
-      <parent link="tilt_servo"/>
-      <child link="mount"/>
       <axis>
         <xyz>0.0 -1.0 0.0</xyz>
       </axis>
    </joint>
 
    <joint name="monitor_joint" type="fixed">
+      <parent>mount</parent>
+      <child>monitor</child>
       <pose> 0.0725 -0.035 1.9e-05 0 0 0 </pose>
-      <parent link="mount"/>
-      <child link="monitor"/>
    </joint>
 
    <joint name="camera_housing_joint" type="fixed">
+      <parent>mount</parent>
+      <child>camera_housing</child>
       <pose> 0.117857 -0.035 0.343649 0 0 0 </pose>
-      <parent link="mount"/>
-      <child link="camera_housing"/>
    </joint>
 
    <joint name="camera_joint" type="fixed">
+      <parent>camera_housing</parent>
+      <child>camera</child>
       <pose> 0.024928 8e-06 -0.012136 0 0 0 </pose>
-      <parent link="camera_housing"/>
-      <child link="camera"/>
    </joint>
 
    <joint name="caster_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>caster</child>
       <pose> 0.2885 0.0 0.03 0 0 0 </pose>
-      <parent link="base_link"/>
-      <child link="caster"/>
    </joint>
 
 
