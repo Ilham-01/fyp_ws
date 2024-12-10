@@ -7,7 +7,7 @@
   <material name="black">
       <color rgba="0.0 0.0 0.0 1.0"/>
   </material>
-
+  
   <material name="silver">
     <color rgba="0.75 0.75 0.75 1.0"/>
   </material>
@@ -32,7 +32,7 @@
     <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://medibot_description/meshes/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="silver"/>
     </visual>
@@ -40,7 +40,7 @@
     <collision>
        <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://medibot_description/meshes/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
 
@@ -60,14 +60,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0535 -0.1535 -0.2145"/>
       <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/left_motor.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_motor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0535 -0.1535 -0.2145"/>
       <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/left_motor.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_motor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -81,14 +81,14 @@
    <visual>
       <origin rpy="0 0 0" xyz="0.0535 0.1535 -0.2145"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/right_motor.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_motor.stl" scale="0.001 0.001 0.001"/>
      </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0535 0.1535 -0.2145"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/right_motor.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_motor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -102,14 +102,14 @@
     <visual>
      <origin rpy="0 0 0" xyz="0.0175 -0.279 -0.16"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
      <material name="black"/>
    </visual>
    <collision>
       <origin rpy="0 0 0" xyz="0.0175 -0.279 -0.16"/>
       <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
      </geometry>
    </collision>
   </link>
@@ -123,14 +123,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0175 0.279 -0.16"/>
       <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
      <material name="black"/>
     </visual>
     <collision>
      <origin rpy="0 0 0" xyz="0.0175 0.279 -0.16"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
      </geometry>
    </collision>
   </link>
@@ -144,7 +144,7 @@
    <visual>
       <origin rpy="0 0 0" xyz="-0.0 0.195 -0.06"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/bottom_panel.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/bottom_panel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
      <material name="white">
        <color rgba="1.0 1.0 1.0 1.0"/>
@@ -153,7 +153,7 @@
     <collision>
      <origin rpy="0 0 0" xyz="-0.0 0.195 -0.06"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/bottom_panel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/bottom_panel.stl" scale="0.001 0.001 0.001"/>
      </geometry>
     </collision>
   </link>
@@ -167,7 +167,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.2 -0.0 -0.35"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/circuit_panel.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/circuit_panel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
      <material name="white">
        <color rgba="1.0 1.0 1.0 1.0"/>
@@ -176,7 +176,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0.2 -0.0 -0.35"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/circuit_panel.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/circuit_panel.stl" scale="0.001 0.001 0.001"/>
      </geometry>
     </collision>
   </link>
@@ -190,7 +190,7 @@
    <visual>
      <origin rpy="0 0 0" xyz="0.2 -0.0 -0.355"/>
      <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/circuit_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/circuit_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
      <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -199,7 +199,7 @@
    <collision>
       <origin rpy="0 0 0" xyz="0.2 -0.0 -0.355"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/circuit_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/circuit_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
    </collision>
   </link>
@@ -213,14 +213,14 @@
    <visual>
      <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.065"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/stand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/stand.stl" scale="0.001 0.001 0.001"/>
      </geometry>
       <material name="silver"/>
    </visual>
    <collision>
       <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.065"/>
      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/stand.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/stand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -234,7 +234,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.2 -0.0 -0.03"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/body.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/body.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
        <color rgba="1.0 1.0 1.0 1.0"/>
@@ -243,7 +243,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0.2 -0.0 -0.03"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/body.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/body.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -257,14 +257,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.326625 -0.0 -0.225"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.326625 -0.0 -0.225"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/lidar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -278,7 +278,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.366625 0.0 -0.47"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/top_panel.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/top_panel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -287,7 +287,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.366625 0.0 -0.47"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/top_panel.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/top_panel.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -301,7 +301,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.171141 -0.0 -0.52"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/realsense_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/realsense_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -310,7 +310,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.171141 -0.0 -0.52"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/realsense_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/realsense_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -324,14 +324,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.147314 -0.059696 -0.56"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/left_realsense.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_realsense.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.147314 -0.059696 -0.56"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/left_realsense.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/left_realsense.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -345,14 +345,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.147314 0.059696 -0.56"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/right_realsense.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_realsense.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.147314 0.059696 -0.56"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/right_realsense.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/right_realsense.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -366,7 +366,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.69"/>
       <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
+       <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
      </geometry>
      <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -375,7 +375,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.69"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -389,7 +389,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.05 -0.0 -1.06"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/pan_servo.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/pan_servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -398,7 +398,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.05 -0.0 -1.06"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/pan_servo.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/pan_servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -412,14 +412,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.05 -0.035 -1.07"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/pan_tilt_mount.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/pan_tilt_mount.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.05 -0.035 -1.07"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/pan_tilt_mount.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/pan_tilt_mount.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -433,7 +433,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.05 -0.051 -1.27"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/tilt_servo.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/tilt_servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -442,7 +442,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.05 -0.051 -1.27"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/tilt_servo.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/tilt_servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -456,7 +456,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.075 -0.035 -1.2175"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/mount.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/mount.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
        <color rgba="1.0 1.0 1.0 1.0"/>
@@ -465,7 +465,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.075 -0.035 -1.2175"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/mount.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/mount.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -479,14 +479,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.1475 0.0 -1.217519"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/monitor.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/monitor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.1475 0.0 -1.217519"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/monitor.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/monitor.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -500,7 +500,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.192857 -0.0 -1.561149"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/camera_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/camera_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -509,7 +509,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="-0.192857 -0.0 -1.561149"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/camera_housing.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/camera_housing.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -523,14 +523,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.217785 -8e-06 -1.549013"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.217785 -8e-06 -1.549013"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -544,14 +544,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.2885 -0.0 -0.03"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/caster.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/caster.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.2885 -0.0 -0.03"/>
       <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/caster.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/caster.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
