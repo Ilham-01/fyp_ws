@@ -19,9 +19,17 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
 
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 0.010" rpy="0 0 0"/>
+  </joint>
+
   <link name="base_link">
     <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin rpy="0.032 0 0" xyz="0 0 0"/>
         <geometry>
           <mesh filename="package://medibot_gazebo/models/medibot_common/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
@@ -239,7 +247,7 @@
     </collision>
   </link>
 
-  <link name="lidar">
+  <link name="base_scan">
     <inertial>
       <origin rpy="0 0 0" xyz="1.9660910471896997e-07 3.067430088395322e-17 0.014762029367898416"/>
       <mass value="0.052814160089970474"/>
@@ -583,7 +591,7 @@
   <joint name="lidar_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.526625 0.0 0.195"/>
     <parent link="body"/>
-    <child link="lidar"/>
+    <child link="base_scan"/>
   </joint>
 
   <joint name="top_panel_joint" type="fixed">

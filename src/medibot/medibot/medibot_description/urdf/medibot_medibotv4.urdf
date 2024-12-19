@@ -1,13 +1,12 @@
 <?xml version="1.0" ?>
-<robot name="medibot_medibotv4"
-  xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="medibot_medibotv4"  xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- <xacro:include filename="$(find medibot_description)/urdf/common_properties.urdf"/> -->
 
   <!-- Init colour -->
   <material name="black">
       <color rgba="0.0 0.0 0.0 1.0"/>
   </material>
-
+  
   <material name="silver">
     <color rgba="0.75 0.75 0.75 1.0"/>
   </material>
@@ -27,10 +26,11 @@
     <child link="base_link"/>
     <origin xyz="0.0 0.0 0.010" rpy="0 0 0"/>
   </joint>
-  
+
+
   <link name="base_link">
     <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin rpy="0.032 0 0" xyz="0 0 0"/>
         <geometry>
           <mesh filename="package://medibot_description/meshes/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
         </geometry>
@@ -93,7 +93,7 @@
     </collision>
   </link>
 
-  <link name="left_wheel">
+  <link name="wheel_left_link">
     <inertial>
       <origin rpy="0 0 0" xyz="7.953816428402094e-09 -0.030000265793469483 4.539531719971457e-08"/>
       <mass value="2.266879326854612"/>
@@ -114,7 +114,7 @@
    </collision>
   </link>
 
-  <link name="right_wheel">
+  <link name="wheel_right_link">
    <inertial>
      <origin rpy="0 0 0" xyz="7.952848390252454e-09 0.030000265792822806 -4.540530937346965e-08"/>
      <mass value="2.266879326854595"/>
@@ -357,29 +357,6 @@
     </collision>
   </link>
 
-  <link name="sonar">
-   <inertial>
-      <origin rpy="0 0 0" xyz="0.024761040929337313 1.4803902564637098e-17 0.03249999999999986"/>
-      <mass value="2.6048925401122753"/>
-      <inertia ixx="0.016776" ixy="-0.0" ixz="-0.0" iyy="0.0062" iyz="0.0" izz="0.021141"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.69"/>
-      <geometry>
-       <mesh filename="package://medibot_description/meshes/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
-     </geometry>
-     <material name="white">
-        <color rgba="1.0 1.0 1.0 1.0"/>
-      </material>
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="-0.08 -0.0 -0.69"/>
-      <geometry>
-        <mesh filename="package://medibot_description/meshes/meshes/sonar.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-    </collision>
-  </link>
-
   <link name="pan_servo">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0021812244512274467 -0.028563653527876792 0.05585888345427237"/>
@@ -568,17 +545,17 @@
     <child link="right_motor"/>
   </joint>
 
-  <joint name="left_wheel_joint" type="continuous">
+  <joint name="wheel_left_joint" type="continuous">
     <origin rpy="0 0 0" xyz="0.036 0.1255 -0.0545"/>
     <parent link="left_motor"/>
-    <child link="left_wheel"/>
+    <child link="wheel_left_link"/>
     <axis xyz="-0.0 1.0 0.0"/>
   </joint>
 
-  <joint name="right_wheel_joint" type="continuous">
+  <joint name="wheel_right_joint" type="continuous">
     <origin rpy="0 0 0" xyz="0.036 -0.1255 -0.0545"/>
     <parent link="right_motor"/>
-    <child link="right_wheel"/>
+    <child link="wheel_right_link"/>
     <axis xyz="-0.0 1.0 0.0"/>
   </joint>
 
@@ -642,13 +619,7 @@
     <child link="right_realsense"/>
   </joint>
 
-  <joint name="sonar_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.625"/>
-    <parent link="stand"/>
-    <child link="sonar"/>
-  </joint>
-
-  <joint name="pan_servo_joint" type="continuous">
+  <joint name="pan_servo_joint" type="fixed">
     <origin rpy="0 0 0" xyz="-0.03 0.0 0.995"/>
     <parent link="stand"/>
     <child link="pan_servo"/>
@@ -667,7 +638,7 @@
     <child link="tilt_servo"/>
   </joint>
 
-  <joint name="tilt_servo_joint" type="continuous">
+  <joint name="tilt_servo_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.025 -0.016 -0.0525"/>
     <parent link="tilt_servo"/>
     <child link="mount"/>

@@ -1,7 +1,7 @@
 medibot_fake_node:
   ros__parameters:
     wheels:
-      separation: 0.160
+      separation: 0.498
       radius: 0.033
 
     joint_states_frame: "base_footprint"
