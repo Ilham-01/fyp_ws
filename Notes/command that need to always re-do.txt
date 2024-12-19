@@ -1,0 +1,93 @@
+
+-------------------------------------------------------------------------------------------------------------------
+#Basic Ubuntu command
+-------------------------------------------------------------------------------------------------------------------
+
+# To open a new window of ubuntu 
+
+code -n <folder-or-file-path>
+
+
+# to clear the build 
+
+rm -rf build/ install/ log/
+
+# command that need to always re-do
+
+source /opt/ros/humble/setup.bash
+
+colcon build
+colcon build --symlink-install
+
+source install/setup.bash
+
+# Dependencies: Ensure all dependencies are installed
+
+rosdep install --from-paths src --ignore-src -r -y
+
+# to get the tree of directories
+
+tree -a src/medibots
+
+#launch file for trial1 (ilham_ws)
+
+ros2 launch medibots launch_sim.launch world:=src/worlds/shapes.sdf
+
+
+-------------------------------------------------------------------------------------------------------------------
+#Turtlebot3 nav2 command
+-------------------------------------------------------------------------------------------------------------------
+
+#terminal 1
+
+source ./install/setup.bash  (setup terminal)
+
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/turtlebot3_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo/models
+
+export TURTLEBOT3_MODEL=waffle_pi  (Gazebo file path and pick robot model)
+
+ros2 launch tb3_sim turtlebot3_world.launch.py  (launch tb3 simulation)
+
+# terminal 2 (nav2 + amcl initial pose) 
+
+source ./install/setup.bash
+ros2 launch tb3_sim nav2.launch.py
+
+#terminal 3 (autonomy behavior)
+
+source ./install/setup.bash
+ros2 launch tb3_autonomy autonomy.launch.py
+
+-------------------------------------------------------------------------------------------------------------------
+#Push into GitHub command
+-------------------------------------------------------------------------------------------------------------------
+
+# Stage the changes:
+# To prepare the changes for committing, you need to "stage" them using the git add command.
+
+git add .
+
+git add filename
+
+# Commit the changes:
+
+git commit -m "A description of the changes you made"
+
+# Push the changes to GitHub:
+
+git push
+
+git push origin master
+
+# check 
+
+git status
+
+
+
+
+
+
+
+
+
