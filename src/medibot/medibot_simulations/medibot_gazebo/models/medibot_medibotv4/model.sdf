@@ -279,16 +279,14 @@
         <ray>
           <scan>
             <horizontal>
-              <samples>360</samples>
-              <resolution>1.000000</resolution>
-              <min_angle>0.000000</min_angle>
-              <max_angle>6.280000</max_angle>
+              <samples>226</samples>
+              <min_angle>-1.9708</min_angle>
+              <max_angle>1.9708</max_angle>
             </horizontal>
           </scan>
           <range>
-            <min>0.120000</min>
-            <max>3.5</max>
-            <resolution>0.015000</resolution>
+            <min>0.3</min>
+            <max>12</max>
           </range>
           <noise>
             <type>gaussian</type>
@@ -717,6 +715,7 @@
         </geometry>
       </visual>
     </link>
+
     <plugin name="medibot_diff_drive" filename="libgazebo_ros_diff_drive.so">
 
       <ros>
@@ -734,7 +733,7 @@
       <wheel_diameter>0.066</wheel_diameter>
 
       <!-- limits -->
-      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_torque>50</max_wheel_torque>
       <max_wheel_acceleration>1.0</max_wheel_acceleration>
 
       <command_topic>cmd_vel</command_topic>
@@ -742,7 +741,7 @@
       <!-- output -->
       <publish_odom>true</publish_odom>
       <publish_odom_tf>true</publish_odom_tf>
-      <publish_wheel_tf>false</publish_wheel_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
 
       <odometry_topic>odom</odometry_topic>
       <odometry_frame>odom</odometry_frame>

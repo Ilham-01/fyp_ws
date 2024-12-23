@@ -43,7 +43,7 @@ def generate_launch_description():
       launch_arguments={'use_sim_time': use_sim_time}.items()
   )
 
-  spawn_turtlebot_cmd = IncludeLaunchDescription(
+  spawn_medibot_cmd = IncludeLaunchDescription(
       PythonLaunchDescriptionSource(
           os.path.join(launch_file_dir, 'spawn_medibot.launch.py')
       ),
@@ -58,6 +58,6 @@ def generate_launch_description():
   ld.add_action(gzserver_cmd)
   ld.add_action(gzclient_cmd)
   ld.add_action(robot_state_publisher_cmd)
-  ld.add_action(spawn_turtlebot_cmd)
+  ld.add_action(spawn_medibot_cmd)
 
   return ld

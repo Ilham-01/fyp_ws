@@ -549,6 +549,8 @@
     <parent link="left_motor"/>
     <child link="wheel_left_link"/>
     <axis xyz="-0.0 1.0 0.0"/>
+    <limit effort="1000" velocity="1000"/>
+    <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
   <joint name="wheel_right_joint" type="continuous">
@@ -556,6 +558,8 @@
     <parent link="right_motor"/>
     <child link="wheel_right_link"/>
     <axis xyz="-0.0 1.0 0.0"/>
+    <limit effort="1000" velocity="1000"/>
+    <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
   <joint name="bottom_panel_joint" type="fixed">
