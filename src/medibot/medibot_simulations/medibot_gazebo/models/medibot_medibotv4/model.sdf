@@ -363,7 +363,7 @@
     <joint name="base_joint" type="fixed">
       <parent>base_footprint</parent>
       <child>base_link</child>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0.0 0.0 0.01 0 0 0</pose>
     </joint>
   
     <joint name="imu_joint" type="fixed">
@@ -590,7 +590,7 @@
     <link name='wheel_left'>
       <pose relative_to='wheel_left_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0 -0.03 0 0 -0 0</pose>
+        <pose>7.953816428402094e-09 -0.030000265793469483 4.539531719971457e-08 0 -0 0</pose>
         <mass>2.26688</mass>
         <inertia>
           <ixx>0.021472</ixx>
@@ -613,8 +613,8 @@
           <!-- This friction pamareter don't contain reliable data!! -->
           <friction>
             <ode>
-              <mu>100000</mu>
-              <mu2>100000</mu2>
+              <mu>250.0</mu>
+              <mu2>250.0</mu2>
               <fdir1>0 0 0</fdir1>
               <slip1>0.0</slip1>
               <slip2>0.0</slip2>
@@ -663,7 +663,7 @@
     <link name='wheel_right'>
       <pose relative_to='wheel_right_joint'>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0 0.03 -0 0 -0 0</pose>
+        <pose>7.952848390252454e-09 0.030000265792822806 -4.540530937346965e-08 0 -0 0</pose>
         <mass>2.26688</mass>
         <inertia>
           <ixx>0.021472</ixx>
@@ -686,8 +686,8 @@
           <!-- This friction pamareter don't contain reliable data!! -->
           <friction>
             <ode>
-              <mu>100000</mu>
-              <mu2>100000</mu2>
+              <mu>250</mu>
+              <mu2>250</mu2>
               <fdir1>0 0 0</fdir1>
               <slip1>0.0</slip1>
               <slip2>0.0</slip2>
@@ -730,10 +730,10 @@
 
       <!-- kinematics -->
       <wheel_separation>0.498</wheel_separation>
-      <wheel_diameter>0.066</wheel_diameter>
+      <wheel_diameter>0.32</wheel_diameter>
 
       <!-- limits -->
-      <max_wheel_torque>50</max_wheel_torque>
+      <max_wheel_torque>150</max_wheel_torque>
       <max_wheel_acceleration>1.0</max_wheel_acceleration>
 
       <command_topic>cmd_vel</command_topic>
@@ -741,7 +741,7 @@
       <!-- output -->
       <publish_odom>true</publish_odom>
       <publish_odom_tf>true</publish_odom_tf>
-      <publish_wheel_tf>true</publish_wheel_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
 
       <odometry_topic>odom</odometry_topic>
       <odometry_frame>odom</odometry_frame>
