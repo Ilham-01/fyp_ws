@@ -1,0 +1,93 @@
+# DOCKER setup 
+------------------------------------------------------------------------------------------------------------------
+#1 install (need to install curl)
+-------------------------------------------------------------------------------------------------------------------
+
+from :  docs.docker.com/engine/install/ubuntu
+
+* install using convenience script 
+
+- follow the code .
+-----------------------------------------------------------------------------------------------------------------
+# 2 post install step 
+-------------------------------------------------------------------------------------------------------------------
+
+sudo groupadd docker 
+
+sudo usermod -aG docker $USER 
+
+#  check if docker enabled 
+
+systemctl is-enabled docker 
+
+# reboot 
+-------------------------------------------------------------------------------------------------------------------
+
+# DOCKER COMMON COMMAND 
+
+-------------------------------------------------------------------------------------------------------------------
+
+# images list  
+
+docker image ls 
+docker images
+
+# pull images
+
+docker image pull <name>:<tag> 
+docker image pull ros:humble
+docker pull
+
+# delete image
+
+docker image rm 
+docker image rm -f (to force)
+docker rmi
+
+# to run container (run image as container)
+
+docker container run
+docker run <image>
+docker run ros:humble
+
+# to run with terminal 
+
+docker run -it <image>
+docker run -it ros:humble
+
+# tell if containers running (+ show autoname of container) 
+
+docker container ls
+docker ps
+
+# to stop container
+
+{ctrl + D}
+docker container stop <autoname>
+docker stop 
+
+# to start back the container 
+
+docker container start -i <autoname>
+docker start
+
+# To remove a container 
+
+docker container rm <autoname>
+docker container prune     #(to remove all container)
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Tips 
+
+# to set a name instead of autoname
+
+docker run -it --name <image> 
+
+# to run a new terminal for the same container
+
+docker exec -it <name/autoname> /bin/bash
+
+
+
+
