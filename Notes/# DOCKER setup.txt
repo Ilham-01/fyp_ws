@@ -76,6 +76,10 @@ docker start
 docker container rm <autoname>
 docker container prune     #(to remove all container)
 
+#to check the docker space 
+
+docker system df
+
 -------------------------------------------------------------------------------------------------------------------
 
 # Tips 
@@ -90,7 +94,23 @@ docker exec -it <name/autoname> /bin/bash
 
 
 
+# directory to workspace in nvidia
 
-testtt 
+/home/mic-710aix/fyp_ws
 
-Testtttt 2
+-------------------------------------------------------------------------------------------------------------------
+
+# ROS2 docker run command
+
+docker run -it --rm \
+    --name ros2_container \
+    -v /home/mic-710aix/fyp_ws:/fyp_ws \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    ros:humble
+
+# vs code docker run command 
+docker run -it -p 8080:8080 \
+-v /home/mic-710a/fyp_ws:/home/Helium/fyp_ws \
+codercom/code-server:latest |
+--auth none

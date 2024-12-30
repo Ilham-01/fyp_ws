@@ -1,4 +1,4 @@
-FROM ros:humble-ros-base
+FROM ros:humble
 
 Run apt-get update && apt-get install -y \
     build-essential \
@@ -6,5 +6,11 @@ Run apt-get update && apt-get install -y \
     python3-rosdep \
     && rm -rf /var/lib/apt/lists/*
 
-Run rosdep update
+# Install desktop tools
+RUN apt-get update && apt-get install -y \
+    ros-humble-desktop \
+    ros-humble-gazebo-ros-pkgs \
+    ros-humble-rviz2 \
+    && rm -rf /var/lib/apt/lists/*
 
+Run rosdep update
