@@ -111,6 +111,6 @@ docker run -it --rm \
 
 # vs code docker run command 
 docker run -it -p 8080:8080 \
--v /home/mic-710a/fyp_ws:/home/Helium/fyp_ws \
-codercom/code-server:latest |
+-v /home/mic-710aix/fyp_ws:/home/Helium/fyp_ws \
+codercom/code-server:latest \
 --auth none
